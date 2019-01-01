@@ -6,3 +6,27 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Lato',sans-serif;
+    font-weight:400;
+    font-size: 16px;
+    line-height: 1.7;
+    color:#777;
+    padding:10px;
+}
+.header{
+    height:95vh; /* 95 % of the view port height*/
+    background-image:linear-gradient(to right bottom,rgba(126,213,111,0.6),rgba(40,180,131,0.6)), url('../img/hero.jpg'); /*we can add multiple backgrounds and gradients on this image property*/
+    background-size: cover;
+    background-position: top; /* specifies how the image will be cropped with decreasing viewport*/
+    clip-path: polygon(0 0,100% 0,100% 75%,0 100%)
+
+}
