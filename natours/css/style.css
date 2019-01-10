@@ -18,9 +18,9 @@ body {
   font-weight: 400;
   font-size: 16px;
   /* this below looks good will use it */
-  line-height: 1.7; 
+  line-height: 1.7;
   color: #777;
-  padding: 10px;
+  /* padding: 10px; */
 }
 .header {
   height: 95vh; /* 95 % of the view port height*/
@@ -43,28 +43,65 @@ body {
 .logo {
   height: 35px;
 }
+/* .logo:hover{ //we can use the animation as many times as we like
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+} */
 
-.text-box{
-    position: absolute;
-    top:50%;
-    left:50%;
-    background-image: red;
-    transform: translate(-40%,-50%)
-
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-image: red;
+  transform: translate(-40%, -50%);
 }
 .heading-primary {
   color: white;
   text-transform: uppercase;
+  backface-visibility: hidden;
 }
 .heading-primary-main {
-    display: block;
-    font-size:60px;
-    font-weight: 400;
-    letter-spacing: 35px;
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  /* animation-delay: 3s; we can delay the animation  */
+  /* animation-iteration-count: 2;Defines the number of animation counts */
+  animation-timing-function: ease-in; /*Accelerates or decelerates an animation */
 }
 .heading-primary-sub {
-    display: block;
-    font-size:20px;
-    font-weight: 400;
-    letter-spacing: 17.4px;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17.4px;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
